@@ -1,3 +1,52 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.yield {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+h1 {
+  color: red;
+}
+
+/* shared navigation */
+
+.navbar {
+  font-family: 'Chewy', cursive;
+  font-size: 2em;
+}
+
+.navbar {
+  background-color: #9dc6e9;
+}
+
+.navbar a {
+  border-left: 1px solid #C2C2C2;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #ff5a72;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+  color: red;
+}
+
+.footer-format {
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7fcb9;
+  /* make it sticky */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+}
+
