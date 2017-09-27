@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body { 
+  background-image: url('/assets/1960s_albums.jpg');
+}
+
 .yield {
   display: flex;
   justify-content: center;
@@ -10,6 +14,11 @@
 
 h1 {
   color: red;
+}
+
+.chewy-pop {
+    font-family: 'Chewy', cursive;
+    font-size: 40px;
 }
 
 /* shared navigation */
