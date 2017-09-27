@@ -2,14 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body { 
-  background-image: url('/assets/1960s_albums.jpg');
-}
-
 .yield {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  text-align: center;
 }
 
 h1 {
@@ -19,6 +16,19 @@ h1 {
 .chewy-pop {
     font-family: 'Chewy', cursive;
     font-size: 40px;
+}
+
+.img {
+  border: 10px solid black;
+  margin-bottom: 2%;
+}
+
+.work-box {
+  background-color: #74b678;
+  // padding-top: 1em;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 10px;
 }
 
 /* shared navigation */
