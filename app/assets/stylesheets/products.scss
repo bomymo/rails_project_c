@@ -1,0 +1,30 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul, li {
+   font-size: 2em;
+   font-family: 'Chewy', cursive;
+}
+
+.chewy-little {
+  font-size: 1.25em;
+  font-family: 'Chewy', cursive;
+}
+
+.basic-grid {
+  border-left: 1px solid #071121;
+  padding-left: 1%;
+}
+
+.work-box {
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.work-box h1 {
+  margin-top: 0;
+}
+

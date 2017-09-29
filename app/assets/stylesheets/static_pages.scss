@@ -18,6 +18,18 @@ h1 {
     font-size: 40px;
 }
 
+.text-pop {
+  color: red;
+}
+
+.standard-text {
+  font-size: 1.5em;
+}
+
+.standard-space {
+  padding-top: 1em;  
+}
+
 .img {
   border: 10px solid black;
   margin-bottom: 2%;
@@ -29,6 +41,15 @@ h1 {
   margin-left: 20%;
   margin-right: 20%;
   border-radius: 10px;
+}
+
+.work-box-top {
+  padding-top: 2em;  
+}
+
+a, a:visited, a:active, a:hover {
+  color: red;
+  text-decoration: none;
 }
 
 /* shared navigation */
