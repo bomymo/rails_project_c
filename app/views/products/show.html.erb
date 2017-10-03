@@ -18,6 +18,16 @@
     <%= @product.image_url %>
   </p>
 
+  <p class="standard-text standard-space">
+    <strong>Colour:</strong>
+    <%= @product.colour %>
+  </p>
+
+  <p class="standard-text standard-space">
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+
   <div class="work-box-top"><!--(2)-->
     <span class="chewy-little">
       <%= link_to 'Edit', edit_product_path(@product) %> |

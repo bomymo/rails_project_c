@@ -10,12 +10,17 @@
 }
 
 h1 {
-  color: red;
+  color: #cc0000;
 }
 
 .chewy-pop {
     font-family: 'Chewy', cursive;
     font-size: 40px;
+}
+
+.page-header {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .text-pop {
@@ -35,6 +40,14 @@ h1 {
   margin-bottom: 2%;
 }
 
+.work-box-wide {
+  background-color: #74b678;
+  // padding-top: 1em;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
+}
+
 .work-box {
   background-color: #74b678;
   // padding-top: 1em;
@@ -50,6 +63,23 @@ h1 {
 a, a:visited, a:active, a:hover {
   color: red;
   text-decoration: none;
+}
+
+.product-name {
+  color: #cc0000;
+  text-align: center;
+}
+
+.product-box {
+  background-color: #f2f2f2;
+  border-style: groove;
+  margin-bottom: 4%;
+}
+
+.image-box {
+  background-color: #f2f2f2;
+  padding: 5%;  
+  display: block;
 }
 
 /* shared navigation */
@@ -84,6 +114,7 @@ a, a:visited, a:active, a:hover {
   background-color: #f7fcb9;
   /* make it sticky */
   position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
