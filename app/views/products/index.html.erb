@@ -3,59 +3,12 @@
 <div class="work-box-wide">
   <h1 class="chewy-pop page-header">Products</h1>
 
-<div class="container"><!-- recurring product list-->
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <div class="product-box">
-          <a href="#"><h1 class="product-name"><%= product.name %></h1></a>
-          <div class="image-box">
-            <%= image_tag(product.image_url, class: "img-responsive") %>
-          </div>
-         <p><%= product.description %></p>
-         <strong>$<%= product.price %></strong>
-        </div><!-- /product-box -->
-      </div><!-- /col -->
-   <% end %>
-  <div><!-- row --> 
-</div><!-- end product list container -->
+  <div class="container"><!-- recurring product list-->
+    <div class="row">
+      <%= render @products %>
+    <div><!-- row --> 
+  </div><!-- end product list container -->
 
-  <!--
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th class="basic-grid">Description</th>
-        <th class="basic-grid">Colour</th>
-        <th>&nbsp;</th> <!-- this fixes a spacing problem 
-        <th class="basic-grid">Image url</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @products.each do |product| %>
-        <tr>
-          <td><%= product.name %></td>
-          <td class="basic-grid"><%= product.description %></td>
-          <td class="basic-grid"><%= product.colour %></td>
-          <td>&nbsp;</td> <!-- this fixes a spacing problem 
-          <td class="basic-grid"><%= product.image_url %></td>
-          <!--<td>&nbsp;</td> <!-- this fixes a spacing problem 
-          <td class="chewy-little"><%= link_to 'Show', product %></td>
-          <td class="chewy-little"><%= link_to 'Edit', edit_product_path(product) %></td>
-          <td class="chewy-little"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-<!--
-  <span class="chewy-little">
-    <%= link_to 'New Product', new_product_path %>
-  </span>
--->
 </div><!-- end work-box -->
 
 

@@ -9,13 +9,34 @@
   text-align: center;
 }
 
-h1 {
+h1, .chewy-red {
   color: #cc0000;
 }
 
 .chewy-pop {
     font-family: 'Chewy', cursive;
     font-size: 40px;
+}
+
+.chewy-little {
+  font-size: 1.25em;
+  font-family: 'Chewy', cursive;
+}
+
+.carousel-indicators li {
+  border: 1px solid #cc0000;
+}
+
+.carousel-indicators .active {
+  background-color: #cc0000;
+}
+
+.carousel-caption {
+  box-shadow: inset 0px 0px 277px 3px #f2f2f2;
+}
+
+#pop60-carousel {
+  
 }
 
 .page-header {

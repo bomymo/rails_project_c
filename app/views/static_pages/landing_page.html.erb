@@ -1,3 +1,38 @@
-<h2>Featured Product:</h2>
-<%= @featured_product %>
-<%= @featured_product.name %>
+<div id="pop60-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#pop60-carousel" data-slide-to="0" class="active"></li> <!-- display buttom for first item (array element 0) -->
+    <% counter = @products.count %>
+    <% for i in 2..counter %><!-- display buttons for items 2 (array element 1) through however many there are -->
+      <li data-target="#pop60-carousel" data-slide-to="1"></li>
+    <% end %>
+    <!--<li data-target="#pop60-carousel" data-slide-to="1"></li>
+    <li data-target="#pop60-carousel" data-slide-to="2"></li>-->
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+      <div class="item<%= " active" if product == @products.first %>">
+        <%= image_tag(product.image_url, class: "center-block") %>
+        <div class = "carousel-caption chewy-little chewy-red">
+          <%= product.name %>
+        </div>
+      </div>
+    <% end %>
+    <!-- repeat for additional items -->
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#pop60-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#pop60-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!-- /pop60-carousel -->
+
+
+
