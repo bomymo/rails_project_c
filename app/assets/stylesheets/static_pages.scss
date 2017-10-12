@@ -16,6 +16,7 @@ h1, .chewy-red {
 .chewy-pop {
     font-family: 'Chewy', cursive;
     font-size: 40px;
+    line-height: 1em;
 }
 
 .chewy-little {
@@ -33,10 +34,6 @@ h1, .chewy-red {
 
 .carousel-caption {
   box-shadow: inset 0px 0px 277px 3px #f2f2f2;
-}
-
-#pop60-carousel {
-  
 }
 
 .page-header {
@@ -63,7 +60,7 @@ h1, .chewy-red {
 
 .work-box-wide {
   background-color: #74b678;
-  // padding-top: 1em;
+  padding-top: 1%;
   margin-left: 2%;
   margin-right: 2%;
   border-radius: 10px;
@@ -78,12 +75,24 @@ h1, .chewy-red {
 }
 
 .work-box-top {
-  padding-top: 2em;  
+  padding-top: 2em;
 }
 
 a, a:visited, a:active, a:hover {
   color: red;
   text-decoration: none;
+}
+
+a.right.carousel-control:hover {
+  background-color: #fff;
+}
+
+a#carousel-edges:hover {
+  background-color: #fff;
+}
+
+.carousel-control {
+  background-color: #fff;
 }
 
 .product-name {
@@ -142,3 +151,9 @@ a, a:visited, a:active, a:hover {
   height: 30px;
 }
 
+@media (max-width: 768px) {
+  .work-box {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
