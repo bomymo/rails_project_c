@@ -1,11 +1,17 @@
+<% product = Product.find(1) %>
 <div class="work-box">
   <div class="yield">
-    <h1>Welcome to <span class="chewy-pop">Pop 60!</span></h1>
+    <h1 class="chewy-pop">Featured Product<h1>
+  </div>
+  <div class="yield pop-link">
+    <a href="/products/<%= product.id %>">
+      <h2><%= product.name %></h2>
+    </a>
   </div>
   <div class="yield">
-    <h2>It's not nostalgia. It's your life!</h2>
-  </div>
+    <a href="/static_pages/landing_page"><button type="button" class="btn btn-primary">See All Our Pop 60 Products!</button></a>
+  </div><br>
   <div class="yield">
-    <%= image_tag("batman_tv_1.jpg", class: "img-responsive img") %>
+    <%= image_tag(product.image_url, class: "img-responsive img") %>
   </div>
 </div>

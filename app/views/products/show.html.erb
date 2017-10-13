@@ -13,15 +13,19 @@
     <%= @product.description %>
   </p>
 
-  <p class="standard-text standard-space">
+  <!--<p class="standard-text standard-space">
     <strong>Image url:</strong>
     <%= @product.image_url %>
+  </p>-->
+
+  <p class="image-center">
+    <%= image_tag(@product.image_url, class: "img-responsive") %>
   </p>
 
-  <p class="standard-text standard-space">
+  <!--<p class="standard-text standard-space">
     <strong>Colour:</strong>
     <%= @product.colour %>
-  </p>
+  </p>-->
 
   <p class="standard-text standard-space">
     <strong>Price:</strong>

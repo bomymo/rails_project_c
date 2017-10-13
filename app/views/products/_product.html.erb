@@ -1,11 +1,13 @@
 <!-- layout of repeating product box -->
-      <div class="col-sm-4"><!-- 2 col-md-4"> -->
-        <div class="product-box">
-          <a href="#"><h1 class="product-name"><%= product.name %></h1></a>
-          <div class="image-box">
-            <%= image_tag(product.image_url, class: "img-responsive") %>
-          </div>
-         <p><%= product.description %></p>
-         <strong>$<%= product.price %></strong>
-        </div><!-- /product-box -->
-      </div><!-- /col -->
+<div class="col-sm-4"><!-- 2 col-md-4"> -->
+  <a href="/products/<%= product.id %>">
+    <div class="product-box">
+      <h1 class="product-name"><%= product.name %></h1>
+      <div class="image-box">
+        <%= image_tag(product.image_url, class: "img-responsive") %>
+      </div>
+      <p><%= product.description %></p>
+      <strong>$<%= product.price %></strong>
+    </div><!-- /product-box -->
+  </a>
+</div><!-- /col -->
