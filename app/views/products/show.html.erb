@@ -1,41 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <div class="work-box work-box-top">
-  <p class="standard-text">
-    <strong>Name:</strong>
+  <p class="standard-text text-center">
     <span class="chewy-pop text-pop">
       <%= @product.name %>
     </span>
   </p>
 
-  <p class="standard-text standard-space">
-    <strong>Description:</strong>
-    <%= @product.description %>
+  <p class="standard-text standard-space text-center text-italics">
+      <%= @product.description %>
   </p>
-
-  <!--<p class="standard-text standard-space">
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
-  </p>-->
 
   <p class="image-center">
     <%= image_tag(@product.image_url, class: "img-responsive") %>
   </p>
 
-  <!--<p class="standard-text standard-space">
-    <strong>Colour:</strong>
-    <%= @product.colour %>
-  </p>-->
-
-  <p class="standard-text standard-space">
+  <p class="standard-text standard-space text-right">
     <strong>Price:</strong>
-    <%= @product.price %>
+    <%= number_to_currency(@product.price) %>
   </p>
 
-  <div class="work-box-top"><!--(2)-->
+  <div class="work-box-top text-right"><!--(2)-->
     <span class="chewy-little">
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Back', products_path %>
+      <%= link_to 'Edit', edit_product_path(@product) %>
+      <!--<#%= link_to 'Back', products_path %>-->
     </span>
   </div><!-- end work-box-top (2)-->
 </div><!-- end work-box -->

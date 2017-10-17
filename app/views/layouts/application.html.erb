@@ -12,7 +12,8 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse">
+<!-- TEST SECTION STARTS HERE -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,18 +22,31 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <div class="pop60-brand navbar-brand">
+            <a href="/static_pages/landing_page">Pop 60!</a>
+          </div><!-- end bomymo -->
+          <%= form_with(url: products_path, method: 'get', local: true, class: "navbar-form navbar-left") do |form| %>
+            <div class="form-group">
+              <%= form.label :q, 'Search for:', class: "form-control hide-under-768" %> 
+              <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control-plaintext search-box", placeholder: "What's your groove?" %>
+              <%= form.submit 'Search!', class: "btn btn-primary search-go-button" %>
+            </div><!--/form-group -->
+          <% end %>
         </div><!-- end navbar-header -->
-        <div class="navbar-brand"><a href="/static_pages/landing_page">Pop 60</a></div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/products">Home</a></li>
             <li><a href="/static_pages/about">About</a></li>
             <li><a href="/static_pages/contact">Contact</a></li>
           </ul>
-        </div><!-- end nav -->
-      </div><!-- end nav container -->
+          </div><!-- end nav -->
+        </div><!-- end nav container -->
     </nav><!-- end navbar -->
     
+<!-- TEST SECTION ENDS HERE -->
+
+
+
     <%= yield %>
 
     <footer>

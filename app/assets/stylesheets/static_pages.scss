@@ -45,6 +45,19 @@ h2 {
   margin-top: 0px;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-italics {
+  font-style: italic;
+  line-height: 1.5em;  
+}
+
 .text-pop {
   color: red;
 }
@@ -125,10 +138,20 @@ a#carousel-edges:hover {
 }
 
 .image-center {
-      display: block;
+    display: block;
     margin: auto;
     width: 40%;
-    
+    padding:1px;
+    background-color:#ff0;
+    border:1px solid red;
+}
+
+#edit-submit-button {
+  background-color: green;
+}
+
+.hidden {
+  display: none;
 }
 
 /* shared navigation */
@@ -166,6 +189,38 @@ a#carousel-edges:hover {
   color: red;
 }
 
+.search-box {
+  border-radius: 4px;
+  padding-left: 5px;
+  font-size: 24px;
+}
+
+.search-box:focus {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: lightgrey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lightgrey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgrey;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: lightgrey;
+  opacity: 1;
+}
+
+.search-go-button {
+  font-size: 18px;
+  // color: #ff5a72;
+  color: red;
+  background-color: white;
+}
+
 .footer-format {
   clear: both;
   display: flex;
@@ -184,5 +239,8 @@ a#carousel-edges:hover {
 @media (max-width: 768px) {
   .work-box {
     margin-left: 3%;
+  }
+  .hide-under-768 {
+    display: none;
   }
 }
