@@ -35,13 +35,13 @@
     </div>
 
     <div class="form-group">
-      <%= form.label :colour, "Color", for: "color-form" %><br>
-      <%= form.text_field :colour, id: :product_colour, class: "form-control", id: "color-form", title: "Color is required", required: "required" %>
+      <%= form.label :colour, "Color", for: "color-form" %>
+      <%= form.text_field :colour, id: :product_colour, class: "form-control small-text-field", id: "color-form", title: "Color is required", required: "required" %>
     </div>
 
     <div class="form-group">
       <%= form.label :price, for: "price-form" %>
-      <%= form.text_field :price, class: "form-control", id: "price-form", title: "Price is required", required: "required" %>
+      <%= form.text_field :price, class: "form-control small-text-field", id: "price-form", title: "Price is required", required: "required", maxlength: "9" %>
     </div>
 
     <%= form.submit 'Submit', class: 'btn btn-primary' %>

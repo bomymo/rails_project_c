@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  padding-top: 20px;
+}
+
 .yield {
   display: flex;
   justify-content: center;
@@ -45,6 +49,10 @@ h2 {
   margin-top: 0px;
 }
 
+.small-text-field {
+    width: 20%;  
+}
+
 .text-center {
   text-align: center;
 }
@@ -85,7 +93,6 @@ h2 {
 
 .work-box {
   background-color: #74b678;
-  // padding-top: 1em;
   margin-left: 20%;
   margin-right: 20%;
   border-radius: 10px;
@@ -242,5 +249,11 @@ a#carousel-edges:hover {
   }
   .hide-under-768 {
     display: none;
+  }
+  .small-text-field {
+    width: 100%;  
+  }
+  .navbar-form {
+    border: 0;
   }
 }
