@@ -7,7 +7,7 @@
         <%= image_tag(product.image_url, class: "img-responsive") %>
       </div>
       <p><%= product.description %></p>
-      <strong>$<%= product.price %></strong>
+      <strong><%= number_to_currency(product.price) %></strong>
     </div><!-- /product-box -->
   </a>
 </div><!-- /col -->
