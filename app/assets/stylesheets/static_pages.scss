@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+//  text-align: center;
 }
 
 h1, .chewy-red {
@@ -21,15 +21,19 @@ h2 {
   margin-top: 0;
 }
 
-.chewy-pop {
+.chewy-pop, .chewy-little, .chewy-button, .navbar {
   font-family: 'Chewy', cursive;
+}
+
+.chewy-pop {
+//  font-family: 'Chewy', cursive;
   font-size: 40px;
   line-height: 1em;
 }
 
 .chewy-little {
   font-size: 1.25em;
-  font-family: 'Chewy', cursive;
+//  font-family: 'Chewy', cursive;
 }
 
 .carousel-indicators li {
@@ -40,20 +44,7 @@ h2 {
   background-color: #cc0000;
 }
 
-.carousel-caption {
-  box-shadow: inset 0px 0px 277px 3px #f2f2f2;
-}
-
-//.page-header {
-//  text-align: center;
-//  margin-top: 0px;
-//}
-
-//.small-text-field {
-//    width: 20%;  
-//}
-
-.text-center {
+.text-center, .yield, .product-name {
   text-align: center;
 }
 
@@ -63,12 +54,11 @@ h2 {
 
 .text-italics {
   font-style: italic;
-//  line-height: 1.5em;  
 }
 
-.text-pop {
-  color: red;
-}
+//.text-pop {
+//  color: red;
+//}
 
 .standard-text {
   font-size: 1.5em;
@@ -94,6 +84,7 @@ h2 {
   background-color: #74b678;
   border-radius: 10px;
   margin-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .work-box-top {
@@ -114,7 +105,7 @@ a#carousel-edges:hover {
 
 .product-name {
   color: #cc0000;
-  text-align: center;
+//  text-align: center;
 }
 
 .product-box {
@@ -124,14 +115,21 @@ a#carousel-edges:hover {
 }
 
 .col-sm-4 a:hover    {
-  color: red;
+//  color: red;
   border-color: red;
   text-decoration: none;
   background-color: #f2f2f2;
 }
 
-.pop-link a:hover    {
+.col-sm-4 a:hover, .pop-link a:hover,
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse navbar-nav>li>a:focus,
+.navbar-brand a:hover, .navbar-brand a:focus, chewy-button a:focus,
+.navbar-inverse, .search-go-button, .chewy-button, .text-pop {
   color: red;
+}
+
+.pop-link a:hover    {
+//  color: red;
   text-decoration: none;
   background-color: #74b678;
 }
@@ -159,10 +157,14 @@ a#carousel-edges:hover {
   display: none;
 }
 
+//.chewy-button {
+//    font-family: 'Chewy', cursive;
+//}
+
 /* shared navigation */
 
 .navbar {
-  font-family: 'Chewy', cursive;
+ // font-family: 'Chewy', cursive;
   font-size: 2em;
 }
 
@@ -179,20 +181,20 @@ a#carousel-edges:hover {
   border-left: 1px solid #C2C2C2;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav>li>a, chewy-button a {
   color: #ff5a72;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse navbar-nav>li>a:focus,
-.navbar-brand a:hover, .navbar-brand a:focus {
-  color: red;
+.navbar-brand a:hover, .navbar-brand a:focus, chewy-button a:focus {
+//  color: red;
   text-decoration: none;
   background-color: #9dc6e9;
 }
 
-.navbar-inverse {
-  color: red;
-}
+//.navbar-inverse {
+//  color: red;
+//}
 
 .search-box {
   border-radius: 4px;
@@ -219,10 +221,10 @@ a#carousel-edges:hover {
   opacity: 1;
 }
 
-.search-go-button {
+.search-go-button, .chewy-button {
   font-size: 18px;
   // color: #ff5a72;
-  color: red;
+  // color: red;
   background-color: white;
 }
 

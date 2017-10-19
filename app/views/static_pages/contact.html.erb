@@ -1,37 +1,40 @@
-<h1>Contact Us</h1>
+
+<div class="col-md-offset-2 col-md-8 work-box">
+  <div class="yield">
+    <h1>Contact <span class="chewy-pop">Pop 60!</span></h1>
+  </div>
+  <div class="yield">
+    <h3>
+      We're always available to discuss the pop culture touchstones<br> that have been important in your life.<br><br>
+      <%= render partial: "contact" %>
+      <br><br>
+    </h3>
+  </div>
 
 <%= flash[:notice] %>
 
 <%= form_with(url: "/static_pages/thank_you", local: true) do |form| %>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-sm-offset-1 col-sm-10">
       <div class="form-group">
-        <%= form.label :name %>
-        <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+        <%= form.label :name, "Your Name" %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter Name", required: "required" %>
       </div>        
       <div class="form-group">
-        <%= form.label :email, "Email Address" %>
-        <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+        <%= form.label :email, "Your Email Address" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "Enter Email", required: "required" %>
       </div>
       <div class="form-group">
         <%= form.label :message %>
-        <%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+        <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", required: "required" %>
       </div>        
     </div>
   </div>
-  <%= form.submit "Send" %>   
+  <div class="row">
+    <div class="col-sm-offset-9 col-sm-2">
+      <%= form.submit "Send!", class: "btn btn-primary chewy-button" %>   
+    </div>
+  </div>
 <% end %>
 
-<!--<div class="col-md-offset-2 col-md-8 work-box">
-  <div class="yield">
-    <h1>Contact <span class="chewy-pop">Pop 60!</span></h1>
-  </div>
-  <div class="yield">
-    <h2>
-      We're always available to discuss the pop culture touchstones<br> that have been important in your life.<br><br>
-      <#%= render partial: "contact" %>
-      <br><br>
-    </h2>
-  </div>
--->
- 
+ </div>
