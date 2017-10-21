@@ -12,6 +12,8 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p><!-- Notifications required by Devise -->
+    <p class="alert"><%= alert %></p><!-- Notifications required by Devise -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -38,6 +40,13 @@
             <li><a href="/products">Home</a></li>
             <li><a href="/static_pages/about">About</a></li>
             <li><a href="/static_pages/contact">Contact</a></li>
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+            </li>
           </ul>
           </div><!-- end nav -->
         </div><!-- end nav container -->

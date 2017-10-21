@@ -1,0 +1,38 @@
+<div class="col-md-offset-4 col-md-4 work-box">
+  <div class="yield">
+    <h1>Log in to <span class="chewy-pop">Pop 60!</span></h1>
+  </div>
+
+  <div class="yield">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="row">
+        <div class="form-group">
+          <%= f.label :email, class: "text-left" %>
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Enter Email", required: "required" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, class: "text-left" %>
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Enter a Password", required: "required" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="checkbox-inline">
+            <%= f.check_box :remember_me, class: "checkbox" %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+      </div><!-- /row -->
+      <br>
+      <div class="row">
+        <div class="actions">
+          <%= f.submit "Log in", class: "btn btn-primary chewy-button" %>
+        </div>
+      </div>
+      <div class="row chewy-little">
+        <%= render "devise/shared/links" %>
+      </div>
+    <% end %>
+    
+  </div><!-- /yield -->
+<div><!-- work-box -->
