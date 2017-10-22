@@ -1,0 +1,26 @@
+<div class="col-md-offset-2 col-md-8 work-box">
+  <div class="yield">
+    <h1>Forgot your password?</h1>
+  </div>
+
+  <div class="yield">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.label :email, class: "text-left" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions", class: "btn btn-primary chewy-button" %>
+      </div>
+    </div>
+    <div class="row chewy-little">
+      <%= render "devise/shared/links" %>
+    </div>
+    <% end %>
+  </div><!-- yield -->
+</div><!-- work-box -->  
