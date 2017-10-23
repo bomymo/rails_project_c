@@ -12,8 +12,12 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p><!-- Notifications required by Devise -->
-    <p class="alert"><%= alert %></p><!-- Notifications required by Devise -->
+    <% if notice %>
+      <p class="alert alert-warning" role="alert"><%= notice %></p><!-- Notifications required by Devise -->
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger" role="alert"><%= alert %></p><!-- Notifications required by Devise -->
+    <% end %>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
