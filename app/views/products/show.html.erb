@@ -8,7 +8,9 @@
   </p>
 
   <p class="standard-text standard-space text-center text-italics">
-      <%= @product.description %>
+    <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+    <%= @product.description %>
+    <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
   </p>
 
   <p class="image-center">
@@ -19,6 +21,12 @@
     <strong>Price:</strong>
     <%= number_to_currency(@product.price) %>
   </p>
+
+  <div class="standard-text standard-space">
+    <span class="text-left"><strong>Comments:</strong></span>
+    <p class="standard-text standard-space">Highest: <%= @product.highest_rating_comment.body %></p>
+    <p class="standard-text standard-space">Lowest: <%= @product.lowest_rating_comment.body %></p>
+  </div>
 
   <div class="work-box-top text-right"><!--(2)-->
     <span class="chewy-little">
