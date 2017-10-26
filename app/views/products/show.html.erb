@@ -22,16 +22,30 @@
     <%= number_to_currency(@product.price) %>
   </p>
 
-  <div class="standard-text standard-space">
-    <span class="text-left"><strong>Comments:</strong></span>
-    <p class="standard-text standard-space">Highest: <%= @product.highest_rating_comment.body %></p>
-    <p class="standard-text standard-space">Lowest: <%= @product.lowest_rating_comment.body %></p>
-  </div>
-
-  <div class="work-box-top text-right"><!--(2)-->
+  <div class="text-right"><!-- edit link -->
     <span class="chewy-little">
       <%= link_to 'Edit', edit_product_path(@product) %>
-      <!--<#%= link_to 'Back', products_path %>-->
     </span>
-  </div><!-- end work-box-top (2)-->
-</div><!-- end work-box -->
+  </div><!-- /edit-link -->
+</div><!-- /work-box -->
+
+<div class="col-md-offset-2 col-md-8 comment-box">
+  <div class="col-md-2">
+  <h4 class="chewy-little">
+      Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>.
+  </h4>
+  </div>
+  <div class="col-md-10">
+    <%= render 'new_comment' %>
+  </div>
+
+  <%= render 'comments' %>
+
+  <div class="bottom-of-page"></div>
+<!--  <div class="standard-text standard-space">
+    <span class="text-left"><strong>Comments:</strong></span>
+    <p class="standard-text standard-space">Highest: <#%= @product.highest_rating_comment.body %></p>
+    <p class="standard-text standard-space">Lowest: <#%= @product.lowest_rating_comment.body %></p>
+  </div>
+-->
+</div>

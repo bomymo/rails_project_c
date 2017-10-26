@@ -1,0 +1,16 @@
+<% if signed_in? %>
+  <h4 class="chewy-little">Rate It Yourself:</h4>
+  <%= form_for([@product, @product.comments.build]) do |f| %>
+    <div class="form-group">
+      <%= f.label :body, "Comments", for: "body-form" %>
+      <%= f.text_area :body, class: "form-control", id: "body-form", title: "Enter your comment here" %>
+    </div>
+    <p>
+      <div class="rating"></div>
+    </p>
+    <p>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </p>
+  <% end %>
+<% end %>
+
