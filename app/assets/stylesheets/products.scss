@@ -18,3 +18,7 @@ ul, li {
   padding-bottom: 1em;
 }
 
+.pagination a:hover, a:focus {
+  font-weight: bold;
+  text-decoration: none;
+}

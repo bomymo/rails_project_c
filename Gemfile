@@ -61,3 +61,5 @@ gem 'cancancan', '~> 2.0'
 # Devise for user authentication and management
 gem 'devise'
 
+# Pagination
+gem 'will_paginate', '~> 3.1.0'
