@@ -92,9 +92,15 @@ a#carousel-edges:hover {
   background-color: #f2f2f2;
 }
 
-.pop-link a:hover    {
-  text-decoration: none;
+.pop-link a:hover {
+  text-decoration: none; 
   background-color: #74b678;
+}
+
+.link-on-page a:hover {
+  color: red;
+  text-decoration: none;
+  background-color: inherit;
 }
 
 .image-box {

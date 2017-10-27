@@ -43,7 +43,9 @@
     <%= render 'comments' %>
   </div>
 
-  <%= will_paginate @comments %>
+  <div class="col-md-12">
+    <%= will_paginate @comments %>
+  </div>
   <div class="col-md-12 bottom-of-page"></div>
 <!--  <div class="standard-text standard-space">
     <span class="text-left"><strong>Comments:</strong></span>

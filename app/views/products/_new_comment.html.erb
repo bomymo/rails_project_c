@@ -12,5 +12,7 @@
       <%= f.submit "Submit", class: "btn btn-primary" %>
     </p>
   <% end %>
+<% else %>
+  <h4 class="chewy-little link-on-page">To rate this product, please <%= link_to('Login', new_user_session_path) %></h4>
 <% end %>
 
