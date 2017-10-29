@@ -8,11 +8,13 @@
       <%= render @products %>
     </div><!-- /row --> 
   </div><!-- end product list container -->
-  <div class="work-box-top text-right"><!--(2)-->
-    <span class="chewy-little">
-      <%= link_to 'New', new_product_path %>
-    </span>
-  </div><!-- end work-box-top (2)-->
+  <% if signed_in? && current_user.admin? %>
+    <div class="work-box-top text-right"><!--(2)-->
+      <span class="chewy-little">
+        <%= link_to 'New', new_product_path %>
+      </span>
+    </div><!-- end work-box-top (2)-->
+  <% end %>
 </div><!-- end work-box -->\
 <div class="bottom-of-page"></div>
 

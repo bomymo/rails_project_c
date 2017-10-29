@@ -22,17 +22,19 @@
     <%= number_to_currency(@product.price) %>
   </p>
 
-  <div class="text-right"><!-- edit link -->
-    <span class="chewy-little">
-      <%= link_to 'Edit', edit_product_path(@product) %>
-    </span>
-  </div><!-- /edit-link -->
+  <% if signed_in? && current_user.admin? %>
+    <div class="text-right"><!-- edit link -->
+      <span class="chewy-little">
+        <%= link_to 'Edit', edit_product_path(@product) %>
+      </span>
+    </div><!-- /edit-link -->
+  <% end %>
 </div><!-- /work-box -->
 
 <div class="col-md-offset-2 col-md-8 comment-box">
   <div class="col-md-2">
     <h4 class="chewy-little">
-      Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>.
+      Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
     </h4>
   </div>
   <div class="col-md-10">
