@@ -287,16 +287,13 @@ h1, .chewy-red {
     font-size: 18px;
   }
   .product-box {
-    height: 700px;
+    height: auto;
   }
 }
 
 @media (max-width: 412px) {
   body {
     padding-top: 50px;    
-  }
-  .product-box {
-    height: 460px;
   }
 }
 

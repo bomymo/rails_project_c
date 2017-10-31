@@ -1,4 +1,4 @@
-<div class="col-md-offset-2 col-md-8 work-box">
+<div class="col-md-offset-2 col-md-8 col-md-offset-2 work-box">
   <div class="yield">
     <h1>Create an account for <span class="chewy-pop">Pop 60!</span></h1>
   </div>
@@ -39,9 +39,11 @@
         </div>
       </div>
       <div class="row chewy-little">
-        <%= render "devise/shared/links" %>
+        <!--<#%= render "devise/shared/links" %>-->
+        <%= link_to "Log in", new_session_path(resource_name) %><br />
       </div>
     <% end %>
   </div><!-- /yield -->
 </div><!-- /work-box -->
-    
+<div class="col-md-12 bottom-of-page"></div>
+
