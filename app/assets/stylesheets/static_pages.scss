@@ -84,7 +84,7 @@ a#carousel-edges:hover {
   background-color: #f2f2f2;
   border-style: groove;
   margin-bottom: 4%;
-  height: 550px;
+  // height: 550px;
   //max-height: 550px;
 }
 
@@ -261,6 +261,12 @@ h1, .chewy-red {
   }
 }
 
+@media (max-width: 990px) {
+  h1 {
+    font-size: 24px;
+  }  
+}
+
 @media (max-width: 768px) {
   .work-box {
     margin-left: 3%;
@@ -280,7 +286,7 @@ h1, .chewy-red {
   #search-form {
     font-size: 18px;
   }
-  h1, .chewy-pop {
+  .chewy-pop {
     font-size: 24px;
   }
   h2 {
@@ -297,3 +303,17 @@ h1, .chewy-red {
   }
 }
 
+@media only screen and (min-width: 481px) {
+  .flex-row.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex-row.row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-row.row:after,
+  .flex-row.row:before {
+    display: flex;
+  }
+}
