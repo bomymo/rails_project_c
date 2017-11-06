@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let (:user) { User.create!(email: "jtest@email.com", password: "moonstone") }
-  let (:user2) { User.create!(email: "jtest2@email.com", password: "moonstone") }
+  let (:user) { FactoryGirl.create(:user) }
   
   describe 'GET #show' do
     context 'when a user is logged in' do
@@ -17,6 +16,8 @@ describe UsersController, type: :controller do
     end
 
     context 'when a different user is logged in' do
+      #let (:user2) { User.create!(email: "jtest2@email.com", password: "moonstone") }
+      let (:user2) { FactoryGirl.create(:user) }
       before(:each) do
         sign_in user
       end

@@ -43,6 +43,8 @@ group :development, :test do
   gem 'sqlite3'
   # rspec-rails for testing
   gem 'rspec-rails', '~> 3.6'
+  gem 'factory_girl_rails', '~> 4.0'
+
   gem 'rails-controller-testing'
 end
 
@@ -66,3 +68,4 @@ gem 'devise'
 
 # Pagination
 gem 'will_paginate', '~> 3.1.0'
+

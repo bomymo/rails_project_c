@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe ProductsController, type: :controller do
-  let (:user_admin) { User.create!(email: "jtest@email.com", password: "moonstone", admin: "true") }
-  let (:user_standard) { User.create!(email: "jtest2@email.com", password: "moonstone") }
-  let (:product) { Product.create!(name: "Batman Movie DVD", description: "test", colour: "black", price: 1.00, image_url: "test") }
+  let (:user_admin) { FactoryGirl.create(:user_admin) }
+  let (:user_standard) { FactoryGirl.create(:user) }
+  let (:product) { FactoryGirl.create(:product) }
 
   describe 'GET #edit' do
     context 'when admin user is logged in' do 
