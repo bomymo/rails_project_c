@@ -22,6 +22,10 @@
     <%= number_to_currency(@product.price) %>
   </p>
 
+  <%= form_with(url: '/payments/create') do |form| %>
+    <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
+  
   <% if signed_in? && current_user.admin? %>
     <div class="text-right"><!-- edit link -->
       <span class="chewy-little">
