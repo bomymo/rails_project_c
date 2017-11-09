@@ -1,0 +1,14 @@
+<div class="col-md-offset-2 col-md-8 work-box">
+  <div class="yield">
+    <h1>Thanks for shopping at <span class="chewy-pop">Pop 60!</span></h1>
+  </div>
+  <div class="yield">
+    <h2>You bought<br><span class="chewy-pop"><%= @product.name %></span><h2>
+    <p class="image-center">
+      <a href="/products/<%= @product.id %>"><%= image_tag(@product.image_url, class: "img-responsive center-block") %></a>
+    </p>
+  </div>
+  <div class="yield">
+    <a href="/static_pages/landing_page"><button type="button" class="btn btn-primary">See All Our Pop 60 Products!</button></a>
+  </div><br>
+</div>
