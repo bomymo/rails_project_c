@@ -16,6 +16,10 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    byebug
+=begin
+    logger.debug "Preparing to show product #{@product.name}"
+=end
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page])
   end
 
