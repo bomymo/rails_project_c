@@ -16,11 +16,9 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    if !Rails.env.production?
-      logger.debug "Preparing to show product #{@product.name}"
-      byebug
-    end
-    @comments = @product.comments.order("created_at DESC").paginate(page: params[:page])
+#    logger.debug "Preparing to show product #{@product.name}"
+#      byebug
+     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page])
   end
 
   # GET /products/new
