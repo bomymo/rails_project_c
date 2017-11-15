@@ -14,7 +14,7 @@
   </p>
 
   <p class="image-center">
-    <%= image_tag(@product.image_url, class: "img-responsive") %>
+    <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "image_tag(@product.image_url)") %>
   </p>
 
   <p class="standard-text standard-space text-right">

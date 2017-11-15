@@ -1,5 +1,4 @@
 $(document).on('turbolinks:load', function(){
-  console.log('turbolinks');
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -7,7 +6,7 @@ $(document).on('turbolinks:load', function(){
     scoreName: 'comment[rating]'
   });
 
-$('.rated').raty({
+  $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
     starOn: '<%= asset_path 'star-on.png' %>',
@@ -17,6 +16,14 @@ $('.rated').raty({
     }
   });
 
-$(".alert").delay(5000).fadeOut(1000);
-});
+  $(".alert").delay(5000).fadeOut(1000);
 
+  $(".img-zoom").elevateZoom();
+
+  $(function() {
+    $('.countdown').countdown({
+        date: "June 7, 2087 15:03:26"
+     });
+  });
+  
+});
