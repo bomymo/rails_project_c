@@ -1,27 +1,28 @@
 <!--<p id="notice"><%= notice %></p>-->
-
+  
 <div class="col-md-offset-2 col-md-8 work-box work-box-top work-box-product">
-  <p class="standard-text text-center">
-    <span class="chewy-pop text-pop">
-      <%= @product.name %>
-    </span>
-  </p>
+  <% cache @product do %>
+    <p class="standard-text text-center">
+      <span class="chewy-pop text-pop">
+        <%= @product.name %>
+      </span>
+    </p>
 
-  <p class="standard-text standard-space text-center text-italics">
-    <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-    <%= @product.description %>
-    <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-  </p>
+    <p class="standard-text standard-space text-center text-italics">
+      <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+      <%= @product.description %>
+      <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+    </p>
 
-  <p class="image-center">
-    <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "image_tag(@product.image_url)") %>
-  </p>
+    <p class="image-center">
+      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "  image_tag(@product.image_url)") %>
+    </p>
 
-  <p class="standard-text standard-space text-right">
-    <strong>Price:</strong>
-    <%= number_to_currency(@product.price) %>
-  </p>
-
+    <p class="standard-text standard-space text-right">
+      <strong>Price:</strong>
+      <%= number_to_currency(@product.price) %>
+    </p>
+  <% end %><!-- end cache -->
   <% if signed_in? %>
     <span class="text-right">
       <%= form_with(url: '/payments/create') do |form| %>

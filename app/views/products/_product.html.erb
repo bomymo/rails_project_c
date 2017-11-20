@@ -1,14 +1,15 @@
 <!-- layout of repeating product box -->
-<% logger.debug "Product: #{product.id}" %>
-<div class="col-sm-4"><!-- 2 col-md-4"> -->
-  <a href="/products/<%= product.id %>">
-    <div class="product-box">
-      <h1 class="product-name"><%= product.name %></h1>
-      <div class="image-box">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-      </div>
-      <p><%= product.description %></p>
-      <strong><%= number_to_currency(product.price) %></strong>
-    </div><!-- /product-box -->
-  </a>
-</div><!-- /col -->
+<% cache product do %>
+  <div class="col-sm-4"><!-- 2 col-md-4"> -->
+    <a href="/products/<%= product.id %>">
+      <div class="product-box">
+        <h1 class="product-name"><%= product.name %></h1>
+        <div class="image-box">
+          <%= image_tag(product.image_url, class: "img-responsive") %>
+        </div>
+        <p><%= product.description %></p>
+        <strong><%= number_to_currency(product.price) %></strong>
+      </div><!-- /product-box -->
+    </a>
+  </div><!-- /col -->
+<% end %><!-- end cache -->

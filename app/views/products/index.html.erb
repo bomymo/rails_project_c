@@ -5,7 +5,9 @@
 
   <div class="container"><!-- recurring product list-->
     <div class="flex-row row">
-      <%= render @products %>
+      <% cache(cache_key_for_products) do %>
+        <%= render @products %>
+      <% end %>
     </div><!-- /row --> 
   </div><!-- end product list container -->
   <% if signed_in? && current_user.admin? %>

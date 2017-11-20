@@ -74,3 +74,5 @@ gem 'will_paginate', '~> 3.1.0'
 # Stripe
 gem 'stripe'
 
+# Memcache client
+gem 'dalli'
