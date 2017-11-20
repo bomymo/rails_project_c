@@ -76,3 +76,6 @@ gem 'stripe'
 
 # Memcache client
 gem 'dalli'
+
+# Redis
+gem 'redis-rails'

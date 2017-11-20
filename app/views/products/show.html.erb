@@ -23,6 +23,7 @@
       <%= number_to_currency(@product.price) %>
     </p>
   <% end %><!-- end cache -->
+  
   <% if signed_in? %>
     <span class="text-right">
       <%= form_with(url: '/payments/create') do |form| %>
@@ -44,6 +45,7 @@
   <div class="col-md-2">
     <h4 class="chewy-little">
       Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div>
+      Views: <%= @product.views %>
     </h4>
   </div>
   <div class="col-md-10">

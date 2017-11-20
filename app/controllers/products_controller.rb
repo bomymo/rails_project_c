@@ -19,6 +19,7 @@ class ProductsController < ApplicationController
 #    logger.debug "Preparing to show product #{@product.name}"
 #      byebug
      @comments = @product.comments.order("created_at DESC").paginate(page: params[:page])
+     @product.viewed!
   end
 
   # GET /products/new
