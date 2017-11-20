@@ -51,7 +51,9 @@
   </div>
 
   <div class="col-md-12">
-    <%= render 'comments' %>
+    <% cache @comment do %>
+      <%= render 'comments' %>
+    <% end %>
   </div>
 
   <div class="col-md-12">
