@@ -100,7 +100,7 @@ Rails.application.configure do
                     }
 
   # Enable ActionCable
-  config.web_socket_server_url = "wss://bomymo-pop60.heroku.com/cable"
-  config.action_cable.allowed_request_origins = ['https://bomymo-pop60.heroku.com', 'http://bomymo-pop60.heroku.com']
+  config.web_socket_server_url = "wss://bomymo-pop60.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://bomymo-pop60.herokuapp.com', 'http://bomymo-pop60.herokuapp.com']
 end
 
