@@ -22,4 +22,7 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
+  # ActionCable
+  mount ActionCable.server => '/cable'
+  
 end

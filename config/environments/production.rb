@@ -99,5 +99,8 @@ Rails.application.configure do
                      :down_retry_delay => 60
                     }
 
+  # Enable ActionCable
+  config.web_socket_server_url = "wss://bomymo-pop60.heroku.com/cable"
+  config.action_cable.allowed_request_origins = ['https://bomymo-pop60.heroku.com', 'http://bomymo-pop60.heroku.com']
 end
 
