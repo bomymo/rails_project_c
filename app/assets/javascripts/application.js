@@ -14,4 +14,6 @@
 //= require turbolinks
 //= require jquery3
 //= require_tree .
+//= require_tree ./channels
 //= require jquery.raty.js
+
