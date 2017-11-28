@@ -5,8 +5,8 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: redis://h:p9c6edbb40ac0d7686375a6061019232dcd343b11520a9974eda1312d3a0fb2d2@ec2-34-206-56-185.compute-1.amazonaws.com:61799
-  #adapter: postgresql
-  #url: postgres://ktvhjuofejtkxv:8039b9d98e58b014775203cde2554b07cd70025221dbe3d1b3f279e7808c2821@ec2-184-73-189-190.compute-1.amazonaws.com:5432/dbn140it002qsg
-  channel_prefix: rails_project_c_production
+  #adapter: redis
+  #url: redis://h:p9c6edbb40ac0d7686375a6061019232dcd343b11520a9974eda1312d3a0fb2d2@ec2-34-206-56-185.compute-1.amazonaws.com:61799
+  adapter: postgresql
+  url: postgres://ktvhjuofejtkxv:8039b9d98e58b014775203cde2554b07cd70025221dbe3d1b3f279e7808c2821@ec2-184-73-189-190.compute-1.amazonaws.com:5432/dbn140it002qsg
+  #channel_prefix: rails_project_c_production
