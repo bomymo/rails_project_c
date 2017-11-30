@@ -1,6 +1,6 @@
 <!--<p id="notice"><%= notice %></p>-->
   
-<div class="col-md-offset-2 col-md-8 work-box work-box-top work-box-product">
+<div class="col-md-offset-2 col-md-8 work-box work-box-top work-box-product" data-product-id = "<%= @product.id %>"> 
   <% cache @product do %>
     <p class="standard-text text-center">
       <span class="chewy-pop text-pop">
@@ -41,7 +41,7 @@
   <% end %>
 </div><!-- /work-box -->
 
-<div class="col-md-offset-2 col-md-8 comment-box">
+<div class="col-md-offset-2 col-md-8 comment-box"  data-product-id = "<%= @product.id %>">
   <div class="col-md-2">
     <h4 class="chewy-little">
       Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div>

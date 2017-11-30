@@ -9,7 +9,21 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
-    console.log("Alert should show now!")
     $(".alert.alert-info").show();
+    $('.product-reviews').prepend(data.comment);
+    $("#average-rating").attr('data-score', data.average_rating);
+    refreshRating();
+  },
+
+  listen_to_comments: function() {
+    console.log("listen to comments");
+    return this.perform('listen', {
+      product_id: $("[data-product-id]").data("product-id")
+    });
   }
+});
+
+$(document).on('turbolinks:load', function() {
+  console.log("product.js turbolinks");
+  App.product.listen_to_comments();
 });
