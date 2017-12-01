@@ -43,7 +43,7 @@ group :development, :test do
   gem 'sqlite3'
   # rspec-rails for testing
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails', '~> 4.0'
+  gem 'factory_bot_rails', '~> 4.8.2'
 
   gem 'rails-controller-testing'
 
