@@ -11,6 +11,13 @@ class UserMailer < ApplicationMailer
     mail(to: user.email,
       subject: "Welcome to #{@appname}")
   end
+
+  def thanks(user, product)
+    logger.debug("!!Thanks message!!")
+    mail(to: user.email,
+      subject: "Your purchase from Pop60!",
+      body: "Thanks for your purchase of #{product.name}! We know you'll love it!")
+  end
 end
 
 
